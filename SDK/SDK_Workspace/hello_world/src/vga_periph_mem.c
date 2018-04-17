@@ -30,11 +30,48 @@ void print_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght){
 	}
 }
 
+void print_char(Xuint32 BaseAddress, unsigned char c)
+{
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position + 4, (c-0x40));
+}
+
+
+
 void clear_graphics_screen(Xuint32 BaseAddress){
 	int i;
 	for (i = 0; i < 9600; i++){
 	    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
 	}
+}
+
+void clear_screen(Xuint32 BaseAddress_txt, Xuint32 BaseAddress_graph)
+{
+	int i;
+	for (i = 0; i < 4800; i++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress_txt + TEXT_MEM_OFF + i*4, 0x20);
+	}
+
+	for (i = 0; i < 9600; i++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress_graph + GRAPHICS_MEM_OFF + i*4, 0x0);
+	}
+}
+
+void set_foreground_color(Xuint32 BaseAddress, int color)
+{
+    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x10, color);// foreground 4
+}
+
+void set_background_color(Xuint32 BaseAddress, int color)
+{
+    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x14, color);// background color 5
+}
+
+void set_font_size(Xuint32 BaseAddress, int size)
+{
+    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x0C, size);// font size       3
+
 }
 
 void draw_square(Xuint32 BaseAddress){
@@ -50,4 +87,20 @@ void draw_square(Xuint32 BaseAddress){
 				}
 			}
 		}
+}
+
+void draw_rectangle(Xuint32 BaseAddress)
+{
+	int i, j, k;
+	for (j = 0; j < 480; j++){
+		for (k = 0; k<(640/32); k++){
+		i = j*(640/32) + k;
+		if ((j > 200) && (j < 280) && (k > 8) && (k < 12)) {
+			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+		}
+		else{
+			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+		}
+		}
+	}
 }
