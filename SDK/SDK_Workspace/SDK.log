@@ -137,3 +137,35 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:16:30.009 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:17:32.052 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:19:03.284 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:19:15.592 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:28:54.245 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:29:35.463 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:30:43.729 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:36:02.585 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:52:56.066 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:11:31.452 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:25:54.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
