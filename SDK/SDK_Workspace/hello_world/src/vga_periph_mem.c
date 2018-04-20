@@ -89,18 +89,46 @@ void draw_square(Xuint32 BaseAddress){
 		}
 }
 
-void draw_rectangle(Xuint32 BaseAddress)
+void draw_rectangle(Xuint32 BaseAddress, int x, int y, int a, int b)
 {
 	int i, j, k;
+
 	for (j = 0; j < 480; j++){
 		for (k = 0; k<(640/32); k++){
-		i = j*(640/32) + k;
-		if ((j > 200) && (j < 280) && (k > 8) && (k < 12)) {
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
-		}
-		else{
-			VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
-		}
+			i = j*(640/32) + k;
+			if ((j > y) && (j < y+b) && (k > x) && (k < x+a)) {
+				VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+			}
+			else{
+				VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+			}
 		}
 	}
+
 }
+
+void move_rectangle(Xuint32 BaseAddress, int x, int y, int a, int b, int t, int step)
+{
+	int x_step = step;
+	while(1)
+	{
+		 draw_rectangle(BaseAddress, x, y, a, b);
+
+		 if(x == 20-a)
+		  	x_step = -1;
+
+		 if(x == -1)
+		    x_step = 1;
+
+		 x = x+x_step;
+
+		 t = 500000;
+		 while(t)
+		     t--;
+	}
+}
+
+
+
+
+

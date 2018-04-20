@@ -59,8 +59,8 @@ int main()
 
     print("Hello World\n\r");
     set_font_size(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x11);
-    set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0xFF00FF);
-       set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x00FF00);
+    set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x0000FF);
+    set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x00FF00);
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
@@ -72,6 +72,14 @@ int main()
    // clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+    int t = 500000;
+    int x = -1;
+    int y = 240;
+    int a = 5;
+    int b = 30;
+    int x_step = 1;
+    move_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR,x,y,a,b,x_step);
+
 
 
 

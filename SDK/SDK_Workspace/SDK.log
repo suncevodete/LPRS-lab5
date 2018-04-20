@@ -169,3 +169,5 @@
 09:52:56.066 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:11:31.452 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:25:54.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:08:35.205 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
