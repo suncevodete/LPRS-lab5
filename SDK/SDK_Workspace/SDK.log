@@ -171,3 +171,46 @@
 10:25:54.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 09:08:35.205 INFO  - Restoring local repository preferences: 
 		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:24:17.418 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:26:04.396 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+09:26:04.396 ERROR - Timeout occured while waiting to get reply for command "xbreakpoint 0 exit sw" 
+09:26:04.412 ERROR - Unexpected error while launching program. java.lang.RuntimeException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.setBreakPoint(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:37:55.235 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:52:44.282 INFO  - FPGA configured successfully with bitstream "D:/ra22-2015/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:55:37.904 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+09:55:37.904 ERROR - Timeout occured while waiting to get reply for command "xconnect mb mdm  " 
+09:55:37.904 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:55:39.401 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+09:55:39.401 ERROR - Timeout occured while waiting to get reply for command "xremove 0 all" 
+09:55:39.401 ERROR - Unexpected error while launching program. java.lang.RuntimeException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.removeAllBreakpoints(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:55:39.620 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+09:55:39.620 ERROR - Timeout occured while waiting to get reply for command "xelf_start_address D:/ra22-2015/lab5/SDK/SDK_Workspace/hello_world/Debug/hello_world.elf" 
+09:55:39.620 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Unable to determine ELF start address: 
+	at com.xilinx.sdk.targetmanager.internal.TM.getStartAddress(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+10:01:42.249 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:01:51.866 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:01.902 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:19.805 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:03:52.538 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:04:31.934 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:09:17.747 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:16:17.235 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+10:16:17.235 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
