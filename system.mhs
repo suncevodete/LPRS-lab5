@@ -186,6 +186,7 @@ BEGIN vga_periph_mem
  PORT blue_o = vga_periph_0_blue_o
  PORT direct_mode_i = my_peripheral_0_DIP_Data[0]
  PORT display_mode_i = my_peripheral_0_DIP_Data[2:1]
+ PORT IRQ_o = vga_periph_mem_0_IRQ_o
 END
 
 BEGIN axi_intc
@@ -195,5 +196,6 @@ BEGIN axi_intc
  PARAMETER C_HIGHADDR = 0x4120ffff
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = clk_100_0000MHz
+ PORT Intr = vga_periph_mem_0_IRQ_o
 END
 
